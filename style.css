@@ -12,10 +12,13 @@ html {
 	font-size: 20px;
 	height: 100%;
 	min-height: 100%;
+	min-width: 1070px;
 }
 body{
 	font-family: HelveticaNeueCyr-Light, Tahoma;
 	font-size: 14px;
+	max-width: 100%;
+	min-width: 940px;
 }
 @font-face {
 	font-family: HelveticaNeueCyr;
@@ -45,6 +48,7 @@ header, .information, .slider, .product, .content, footer {
 	position: fixed;
 	right: 0;
 	top: 250px;
+	box-shadow: 5px 7px 10px rgba(0,0,0,0.2);
 	background: #e7e8e9 url(images/massage.png) no-repeat 50% 50%;
 }
 										/*HEADER*/
@@ -87,6 +91,7 @@ header > a {
 .social-links {
 	position: absolute;
 	right: 0;
+	top: 40px;
 	line-height: 18px;
 }
 .social-links a {
@@ -99,11 +104,13 @@ header > a {
 	bottom: 66px;
 }
 .search input {
-	width: 220px;
+	width: 100%;
 	height: 25px;
 	background: #ffffff;
 	border: 1px solid #e1e4e6;
 	outline: none;
+	background: #ffffff url(images/search.png) no-repeat 95% 50%;
+	  text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
 }
 										/*INFORMATION*/
 .information-wrap {
@@ -131,8 +138,16 @@ header > a {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
+.indication {
+	width: 300px;
+	height: 5px;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 40px;
+	background: #e3e5e6;
+}
 										/*SLIDER*/
-.slider {
+.product {
 	height: 480px;
 	position: relative;
 	margin-top: 40px;
@@ -155,11 +170,12 @@ a[title="right"] {
 	top: 43%;
 	background: url(images/arrow-r.png) no-repeat;
 }
-.select {
+.navigation {
+	width: 100%;
 	height: 70px;
-	background: #eaeef1;
+	background-color: #eaeef1;
 }
-.select a {
+.navigation a {
 	display: inline-block;
 	height: 100%;
 	padding:  0 20px 0 20px;
@@ -167,16 +183,22 @@ a[title="right"] {
 	line-height: 70px;
 	text-decoration: none;
 }
-.select a:hover {
-	background: #d5004b;
+.navigation a:hover {
+	background: #d5004e;
 	color: #ffffff;
 }
-.slide {
+.slider {
+	height: 370px;
 	position: relative;
-	width: 100%
+	overflow: hidden;
+}
+.slide {
+	height: 370px;
+	position: relative;
+	width: 100%;
 }
 .slide h1 {
-	width: 50%;
+	width: 47%;
 	color: #74c4e4;
 	position: absolute;
 	right: 0;
@@ -191,14 +213,14 @@ a[title="right"] {
 	height: 370px;
 	width: 51%;
 }
-.product {
+.description {
 	position: absolute;
-	bottom: -180px;
+	bottom: -188px;
 	border-top: 4px solid #d7d8d9;
 	background: #eaeef1;
 	padding: 40px; 
 }
-.product p{
+.description p{
 	display: inline-table;
 	width: 24.6%;
 	line-height: 18px;
@@ -297,4 +319,10 @@ footer p {
 	padding-left: 65px;
 	line-height: 15px;
 	padding-top: 5px;
+}
+										/*ADAPTATION*/
+@media screen and (max-width: 800px){
+	header, .information, .slider, .product, .content, footer {
+		width: 800px;
+	}
 }

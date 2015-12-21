@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	 <title>Splat</title>
 	  <link rel="stylesheet" type="text/css" href="style.css">
+	  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	  		<script type="text/javascript" src="cycle.js"></script>
+	  			<script type="text/javascript" src="jquery.js"></script>
 </head>
 <body>
 <div class="massage"></div>
@@ -33,7 +36,7 @@
 		</div>
 		<div class="search">
 			<form>
-				<input type="search" name="serch" value="Serch">
+				<input type="search" id="search" name="search" value="" placeholder="Искать...">
 			</form>
 		</div>
 	</header>
@@ -41,44 +44,76 @@
 <div class="information-wrap">
 	<div class="information">
 		<div class="idea">
-			<img src="images/idea.png" height="90" width="86">
+			<img src="images/idea.png" height="80" width="80">
 			 <h1>Идея</h1>
 			  <p>Наши идеи рождаются из мечты. Нам нравится находить их и воплощать в жизнь. Мы искренне рады, когда наши друзья, покупатели и партнеры делятся своими фантазиями и желаниями и просят нас сделать что-то по-настоящему нужное. </p>
 		</div>
 		<div class="quality">
-			<img src="images/quality.png" height="60" width="60">
+			<img src="images/quality.png" height="55" width="55">
 			 <h1>Качество</h1>
 			  <p>Идея непрерывного контроля качества и совершенствования всех видов продуктов — наша норма. Собственное сертифицированное производство и отлаженная работа службы контроля качества дают нам возможность получить высочайший уровень выпускаемых продуктов. </p>
 		</div>
 		<div class="result">
-			<img src="images/result.png" height="85" width="50">
+			<img src="images/result.png" height="80" width="45">
 			 <h1>Результат</h1>
 			  <p>Все продукты SPLAT  проходят расширенные клинические испытания, терапевтический эффект которых подтвержден в результате исследований, проведенных в ведущих институтах России, странах Евросоюза, Японии или США.</p>
 		</div>
 		<div class="ecology">
-			<img src="images/ecology.png" height="64" width="50">
+			<img src="images/ecology.png" height="65" width="45">
 			 <h1>Экологичность</h1>
 			  <p>Мы ценим возможность сохранить экологию нашей планеты, поэтому в составе продуктов, произво-
 				димых нами, нет вредных для здоровья планеты и человека ингредиентов. Наше предприятие является CO2-нейтральным и находится в экологически чистом районе Валдая.</p>
 		</div>
 	</div>
+	<div class="indication">
+		<ul>
+			<li></li>
+			 <li></li>
+			  <li></li>
+			   <li></li>
+			    <li></li>
+			     <li></li>
+		</ul>
+	</div>
 </div>
-<div class="slider">
-	<a href="#" title="left"></a>
- 	<a href="#" title="right"></a>
- 	 <nav class="select">
+<div class="product">
+	<a title="left" id="left"></a>
+ 	<a title="right" id="right"></a>
+ 	 <div class="navigation">
  	 	<a href="#">LALLUM BABY</a>
  	 	 <a href="#" class="">SPLAT PROFESSIONAL</a>
  	 	  <a href="#" class="">INEY</a>
  	 	   <a href="#" class="">PRO-WHITER</a>
  	 	    <a href="#" class="">SMILEX</a>
  	 	     <a href="#" class="">INNOVA</a>
- 	 </nav>
- 	 <div class="slide">
+ 	 </div>
+ 	 <div class="slider" id="slider">
+ 	 <div class="slide first">
  	 	<div class="foto"><img src="images/set.png" alt="set" height="370" width="480"></div>
  	 	 <h1>INNEY — инновационные средства для интенсивного отбеливания и укрепления эмали зубов</h1>
  	 </div>
- 	  <div class="product">
+ 	 <div class="slide second">
+ 	 	<div class="foto"><img src="images/pasta.png" alt="set" height="370" width="480"></div>
+ 	 	 <h1>PRO-WHITER — инновационные средства для интенсивного отбеливания и укрепления эмали зубов</h1>
+ 	 </div>
+ 	 <div class="slide third">
+ 	 	<div class="foto"><img src="images/set.png" alt="set" height="370" width="480"></div>
+ 	 	 <h1>SMILEX — инновационные средства для интенсивного отбеливания и укрепления эмали зубов</h1>
+ 	 </div>
+ 	 <div class="slide fourth">
+ 	 	<div class="foto"><img src="images/pasta.png" alt="set" height="370" width="480"></div>
+ 	 	 <h1>INNOWA — инновационные средства для интенсивного отбеливания и укрепления эмали зубов</h1>
+ 	 </div>
+ 	 <div class="slide fifth">
+ 	 	<div class="foto"><img src="images/set.png" alt="set" height="370" width="480"></div>
+ 	 	 <h1>LALLUM BABY — инновационные средства для интенсивного отбеливания и укрепления эмали зубов</h1>
+ 	 </div>
+ 	 <div class="slide sixth">
+ 	 	<div class="foto"><img src="images/pasta.png" alt="set" height="370" width="480"></div>
+ 	 	 <h1>SPLAT PROFESSIONAL — инновационные средства для интенсивного отбеливания и укрепления эмали зубов</h1>
+ 	 </div>
+ 	 </div>
+ 	  <div class="description">
  	  	<p>Серия инновационных продуктов Iney не имеет аналогов в области ухода за полостью рта.</p>
  	  	 <p>4 года научных работ и клинических иследований, свершивших революционный прорыв и открывших миру инновационную отбеливающую систему <a href="#">SNOW-NOW</a></p>
  	  	  <p>Первые в мире профессиональные средства 
